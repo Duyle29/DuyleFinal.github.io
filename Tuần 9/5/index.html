@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini cacculator </title>
+    <script language="Javascript">
+        function caculator(){
+            var a = document.frmCal.txta;
+            var b = document.frmCal.txtb;
+            var c = document.frmCal.txtc;
+            var r = document.frmCal.txtr;
+
+            var numberFormat= / ^[-+]?\d+(\.\d+)?$/;
+            if (numberFormat.test(a.value) == false) {
+                alert("a must be a number!" );
+                a.focus();
+            }
+            else if(numberFormat.test(b.value) == false){
+                alert("b must be a number!" );
+                b.focus();
+            }
+            else if ((o.value=="/"||o.value=="%") && parseInt(b.value)==0){
+                alert("b can't be 0!" );
+                r.value="";
+                b.focus();
+            }
+            elser.value= eval(a.value +o.value +b.value);
+        }
+
+    </script>
+</head>
+<body>
+    <form name="frmCal">
+        <table border="0" align="center">
+            <tr>
+                <td colspan="2" align="center">
+                    <h2>MINI CACULATOR</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">a=</td>
+                <td><input name="txta" ></td>
+            </tr>
+            <tr>
+                <td align="right">b=</td>
+                <td><input name="txtb" ></td>
+            </tr>
+            <tr>
+                <td align="right"> Operator:</td>
+                <td>
+                    <select name="slto" >
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Result:</td>
+                <td><input name="txtr" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"  ></td>
+                <input type="button" value="Caculator" onclick="caculator()">
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

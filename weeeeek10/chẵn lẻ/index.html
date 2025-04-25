@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" id =main_form>
+        <input type="number" id="number1">
+        <br>
+        <button onclick="checkNumber();" id="Checkbutton" >Check</button>
+        <p id="Result" style="color:aqua"></p>
+        <button onclick="resetNew();" id="reset_button" style="display:none;">Reset</button>
+    </form>
+    <!-- Javascript  -->
+    <script>
+        function checkNumber() {
+            // show the button
+            document.getElementById("reset_button").style.display = "block";
+            document.getElementById("Checkbutton").style.display = "none";
+            var x =parseInt(document.getElementById("number1").value);
+            if (x % 2 ===0){
+                
+                // show text at the botton
+                var text = document.getElementById("Result");
+                text.innerHTML = x + " is Even";
+                // document.getElementById("main_form").appendChild(text);
+                text.style.fontSize = "20px";
+                
+            }
+            else{
+                // show text at the botton
+                
+                var text = document.getElementById("Result");
+                text.innerHTML = x + " is Odd";  
+                // document.getElementById("main_form").appendChild(text);
+                // document.getElementById("Checkbutton").style.display = "block";
+            }
+        }
+        function resetNew(){
+            //reset the text
+            document.getElementById("Result").innerHTML = "";
+            //reset the input
+            document.getElementById("number1").value = ""; 
+            //hidden the button
+            document.getElementById("reset_button").style.display = "none";
+            
+            document.getElementById("Checkbutton").style.display = "block";
+    }
+
+    </script>
+</body>
+</html>

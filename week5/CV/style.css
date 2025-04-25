@@ -1,0 +1,38 @@
+.thongtincanhan img {
+    width:200px;
+    height:200px;
+    border-radius: 70%;
+    display: block;
+    margin:0 auto 20px; 
+}
+.thongtincanhan{
+    background-color: grey;
+    display: block;
+    position:absolute;
+    top:0px;
+    left: 0px;
+    width:20%;
+    height:100%;
+    font-size:20px;
+}
+
+.Thongtin{
+    background-color:rgb(221, 224, 214);
+    position:absolute;
+    width:80%;
+    height:100%;
+    top:0px;
+    right:0px;
+    font-size:27px;
+    text-align:initial ;   
+}
+.Thongtin h5{
+    font-size:30px;
+}
+.Thongtin h6{
+    font-size:30px;
+}
+.Thongtin iframe{
+    position:fixed;
+
+}

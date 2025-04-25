@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style language="css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .menu-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu-item {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .hidden {
+            display: none;
+        }
+        .toggle-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /*grid view */
+        .gridview .menu-items {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 10px;
+        }
+        .gridview .menu-item {
+            margin:0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Menu Nhà Hàng </h1>
+    <button class="toggle-btn" onclick="toggleView()">Chuyển đổi chế độ hiển thị   </button>
+    <div>
+        <h2>Món khai vị </h2>
+        <ul class="menu-items">
+            <li class="menu-item">Thịt bò</li>
+            <li class="menu-item">Thịt gà</li>
+            <li class="menu-item">Thịt heo</li>
+            <li class="menu-item">Thịt cừu</li>
+            <li class="menu-item">Thịt vịt</li>
+        </ul>
+    </div>
+
+    <div>
+                <h2>Món chính </h2>
+                <ul class="menu-items">
+                    <li class="menu-item">Cá hồi</li>
+                    <li class="menu-item">Tôm hùm</li>
+                    <li class="menu-item">Mực</li>
+                    <li class="menu-item">Bạch tuộc</li>
+                    <li class="menu-item">Sò điệp</li>
+                </ul>
+    </div>
+    <script>
+        function toggleView() {
+            var items = document.querySelectorAll('.menu-items');
+            items.forEach(function(item) {
+                item.classList.toggle('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
